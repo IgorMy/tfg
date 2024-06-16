@@ -6,6 +6,8 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile
+    networks:
+      - nginx-unet
   
   nginx-proxy:
     image: 'jc21/nginx-proxy-manager:latest'
