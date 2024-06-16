@@ -1,0 +1,6 @@
+tensorflow==2.12
+matplotlib 
+opencv-python-headless
+ipykernel
+fastapi
+nicegui

@@ -1,0 +1,27 @@
+services:
+  u-net-fast-api:
+    container_name: u-net-fast-api
+    ports:
+      - "8000:8000"
+    build: 
+      context: .
+      dockerfile: Dockerfile
+  
+  nginx-proxy:
+    image: 'jc21/nginx-proxy-manager:latest'
+    restart: unless-stopped
+    ports:
+      # These ports are in format <host-port>:<container-port>
+      - '80:80' # Public HTTP Port
+      - '443:443' # Public HTTPS Port
+      - '8081:81' # Admin Web Port
+      # Add any other Stream port you want to expose
+    volumes:
+      - ./data:/data
+      - ./letsencrypt:/etc/letsencrypt
+    networks:
+      - nginx-unet
+
+networks:
+  nginx-unet:
+    driver: bridge
