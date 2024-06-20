@@ -49,7 +49,7 @@ def file_selection():
                         ),
                     )
                 ).classes("p-0 bg-transparent"):
-                    ui.image(f"static/test_images/{i}.jpg").classes(
+                    ui.image(f"/static/test_images/{i}.jpg").classes(
                         "rounded-md w-[20em] md:w-80"
                     )
         with ui.element("div").classes("flex flex-row justify-center w-full mt-6"):
