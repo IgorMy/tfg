@@ -5,7 +5,9 @@ from src.ui.header.components.title import title
 
 def header():
     dark = ui.dark_mode()
-    with ui.element("div").classes("w-full flex justify-between"):
+    with ui.element("div").classes(
+        "w-full flex justify-center gap-4 xl:justify-between"
+    ):
         ui.element("div").classes("w-10")
         title()
         with ChangeThemeComponent():

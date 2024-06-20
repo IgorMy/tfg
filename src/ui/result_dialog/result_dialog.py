@@ -40,7 +40,9 @@ async def result_dialog(image: Image, dialog: ui.dialog):
 
     dialog.clear()
 
-    with dialog, ui.card().classes("!max-w-[70%] mb-10"):
+    with dialog, ui.card().classes(
+        "!max-w-[100%]  sm:!max-w-[95%] lg:!max-w-[70%] mb-10"
+    ):
         ui.label("Resultado de la segmentación").classes("text-2xl w-full text-center")
         with ui.element("div").classes(
             "flex flex-row items-center justify-center w-full gap-4"
@@ -49,16 +51,16 @@ async def result_dialog(image: Image, dialog: ui.dialog):
                 with ui.element("div"):
                     ui.label("Imagen original").classes("w-full text-center text-lg")
                     ui.image(image).classes(
-                        "rounded-md w-[20rem] row-start-1 col-start-1"
+                        "rounded-md w-[20em] row-start-1 col-start-1"
                     )
                 with ui.element("div"):
                     ui.label("Máscara obtenida").classes("w-full text-center text-lg")
                     ui.image(processed_image).classes(
-                        "rounded-md w-[20rem] row-start-2 col-start-1"
+                        "rounded-md w-[20em] row-start-2 col-start-1"
                     )
             with ui.element("div").classes("flex flex-col row-span-2"):
                 ui.label("Imagen con máscara").classes("w-full text-center text-lg")
-                ui.image(extra_image).classes("rounded-md w-[40rem]")
+                ui.image(extra_image).classes("rounded-md w-[20em] xl:w-[40em]")
         with ui.element("div").classes("w-full flex justify-center mt-6"):
             close_button(lambda: (dialog.close(), dialog.clear()))
     dialog.open()

@@ -32,7 +32,7 @@ def file_selection():
 
     dynamic_dialog = ui.dialog()
 
-    with ui.dialog() as dialog, ui.card().classes("!max-w-[70%] mb-10"):
+    with ui.dialog() as dialog, ui.card().classes("!max-w-full xl:!max-w-[80%] mb-10"):
         ui.label("Seleccione una imagen de la galería de imágenes de prueba").classes(
             "text-xl w-full text-center"
         )
@@ -49,7 +49,9 @@ def file_selection():
                         ),
                     )
                 ).classes("p-0 bg-transparent"):
-                    ui.image(f"static/test_images/{i}.jpg").classes("rounded-md w-80")
+                    ui.image(f"static/test_images/{i}.jpg").classes(
+                        "rounded-md w-[20em] md:w-80"
+                    )
         with ui.element("div").classes("flex flex-row justify-center w-full mt-6"):
             close_button(dialog.close)
 
