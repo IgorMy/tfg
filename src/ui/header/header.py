@@ -12,5 +12,5 @@ def header():
             ui.tooltip("Alternar tema")
     with ui.element("div").classes("w-full flex justify-center"):
         ui.label(
-            "Aplicación de una implementación de la red neuronal U-Net, desarrollada en tensorflow, para la segmentación facial en imágenes térmicas con perfil de colór White Hot. Esta aplicación es una muestra de funcionamiento y esta limitado su uso."
+            "Aplicación de una implementación de la red neuronal U-Net, desarrollada en tensorflow, para la segmentación facial en imágenes térmicas con perfil de colór White Hot. Esta aplicación es una muestra de funcionamiento y está limitado su uso."
         ).classes("text-center text-lg")
