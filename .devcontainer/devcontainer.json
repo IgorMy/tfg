@@ -1,0 +1,51 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/python
+{
+	"name": "TIFDS-FastAPI",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"build": {
+		"dockerfile": "../Dockerfile",
+		"context": ".."
+	},
+	// add python and jupyter extension
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"ms-toolsai.jupyter",
+				// black formatter
+				"ms-python.black-formatter",
+				// error lens
+				"usernamehw.errorlens",
+				// pylance
+				"ms-python.vscode-pylance",
+				// python debugger
+				"ms-python.python-debugger",
+				// docker
+				"ms-azuretools.vscode-docker",
+				// git
+				"vscode.git"
+			],
+			"settings": {
+				"editor.formatOnSave": true,
+				"editor.formatOnType": true,
+				"editor.defaultFormatter": "ms-python.black-formatter"
+			}
+		},
+		"settings": {
+			"python.defaultInterpreterPath": "/usr/local/bin/python"
+		}
+	},
+	"forwardPorts": [
+		8000
+	],
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "pip3 install --user -r requirements.txt"
+	// Configure tool-specific properties.
+	// "customizations": {},
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}
