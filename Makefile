@@ -3,4 +3,4 @@ dev:
 start:
 	uvicorn src.app:app --host 0.0.0.0 --port 8000
 docker:
-	docker compose up -d --force-recreate
+	docker compose up --force-recreate --build -d
