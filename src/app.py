@@ -33,6 +33,24 @@ def init_frontend(fastapi_app: FastAPI) -> None:
                 align-items: center !important;
             }
             </style>
+            <!-- Primary Meta Tags -->
+            <title>TFG - Ihar Myshkevich Kiryanav - Segmentación facial en imágenes térmicas</title>
+            <meta name="title" content="TFG - Ihar Myshkevich Kiryanav - Segmentación facial en imágenes térmicas" />
+            <meta name="description" content="Aplicación de una implementación de la red neuronal U-Net, desarrollada en tensorflow, para la segmentación facial en imágenes térmicas con perfil de colór White Hot. Esta aplicación es una muestra de funcionamiento y está limitado su uso." />
+
+            <!-- Open Graph / Facebook -->
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content="https://tfg.iharmyshkevich.es/" />
+            <meta property="og:title" content="TFG - Ihar Myshkevich Kiryanav - Segmentación facial en imágenes térmicas" />
+            <meta property="og:description" content="Aplicación de una implementación de la red neuronal U-Net, desarrollada en tensorflow, para la segmentación facial en imágenes térmicas con perfil de colór White Hot. Esta aplicación es una muestra de funcionamiento y está limitado su uso." />
+            <meta property="og:image" content="https://tfg.iharmyshkevich.es/static/images/meta.png" />
+
+            <!-- Twitter -->
+            <meta property="twitter:card" content="summary_large_image" />
+            <meta property="twitter:url" content="https://tfg.iharmyshkevich.es/" />
+            <meta property="twitter:title" content="TFG - Ihar Myshkevich Kiryanav - Segmentación facial en imágenes térmicas" />
+            <meta property="twitter:description" content="Aplicación de una implementación de la red neuronal U-Net, desarrollada en tensorflow, para la segmentación facial en imágenes térmicas con perfil de colór White Hot. Esta aplicación es una muestra de funcionamiento y está limitado su uso." />
+            <meta property="twitter:image" content="https://tfg.iharmyshkevich.es/static/images/meta.png" />
             """
         )
         with body():
